@@ -1,6 +1,6 @@
 name: Recovery Build (Legacy)
 on:
-  workflow_dispatch:
+  workflow_dispatch: runs-on:Self-hosted
     inputs:
       IMG_URL:
         description: 'IMG_ URL'
@@ -22,7 +22,7 @@ on:
 jobs:
   build:
     if: github.event.repository.owner.id == github.event.sender.id
-    runs-on: self-hosted
+    runs-on:
     permissions:
       contents: write
     steps:
